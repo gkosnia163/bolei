@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolei</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="index.html" class="logo">
+        <img src="images/mpalabolei.png" alt="Home">
+        <span>Bolei</span> 
+    </a>
+    
+    <div class="form-container">
+        <div class="form-card">
+            <div class="form-header">ΕΓΓΡΑΦΗ ΧΡΗΣΤΗ</div>
+            <form id="signup-form" class="result-form">
+                <div class="grid-2-col">
+                    <div class="form-section">
+                        <label for="firstname">Όνομα</label>
+                        <input type="text" id="firstname" name="firstname" required>
+                    </div>
+                    <div class="form-section">
+                        <label for="lastname">Επίθετο</label>
+                        <input type="text" id="lastname" name="lastname" required>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <label for="role">Ρόλος</label>
+                    <select id="role" name="role" required>
+                        <option value="" disabled selected>Επιλέξτε ρόλο</option>
+                        <option value="manager">Διαχειριστής Ομάδας</option>
+                        <option value="referee">Διαιτητής</option>
+                    </select>
+                </div>
+
+                <div class="grid-2-col">
+                    <div class="form-section">
+                        <label for="phone">Τηλέφωνο</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-section">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+
+                <div class="grid-2-col">
+                    <div class="form-section">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="form-section">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password" name="confirm-password" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">Εγγραφη</button>
+                <p style="margin-top: 15px; font-size: 0.9rem;">Έχετε ήδη λογαριασμό; <a href="login.html" style="color: lightcoral; font-weight: bold;">Σύνδεση</a></p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
