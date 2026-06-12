@@ -1,0 +1,17 @@
+CREATE DATABASE IF NOT EXISTS bolei_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+    USE bolei_db;                                                                          
+                                                                                           
+    CREATE TABLE IF NOT EXISTS users (                                                     
+        id INT AUTO_INCREMENT PRIMARY KEY,                                                 
+        firstname VARCHAR(20) NOT NULL,                                                    
+        lastname VARCHAR(20) NOT NULL,                                                     
+        phone VARCHAR(10) NOT NULL,                                                        
+        email VARCHAR(50) NOT NULL,                                                       
+        username VARCHAR(20) NOT NULL UNIQUE,                                              
+        password VARCHAR(255) NOT NULL,                                                    
+        role ENUM('visitor', 'manager', 'referee') NOT NULL DEFAULT 'visitor',             
+        status ENUM('pending', 'active') NOT NULL DEFAULT 'pending'                        
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;       
+
+
+/*bale mono auto sto localhost/phpmyadmin εκεί που λέει sql ώστε να δημιουργήσει database και τους ελέγχους 

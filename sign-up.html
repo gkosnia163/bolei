@@ -31,8 +31,8 @@
 
                 <div class="form-section">
                     <label for="role">Ρόλος</label>
-                    <select id="role" name="role" required>
-                        <option value="" disabled selected>Επιλέξτε ρόλο</option>
+                    <select id="role" name="role">
+                        <option value="visitor" selected>Απλός Επισκέπτης</option>
                         <option value="manager">Διαχειριστής Ομάδας</option>
                         <option value="referee">Διαιτητής</option>
                     </select>
@@ -76,7 +76,6 @@
             </form>
         </div>
     </div>
-    <script src="profiles.js"></script>
     <script>
         function showError(inputId, message) {
             document.getElementById(inputId).style.borderColor = 'red';
@@ -138,6 +137,10 @@
                 showError("phone", 'To τηλέφωνο πρέπει να αποτελείται από ακριβώς 10 ψηφία!');
                 hasError = true;
             }
+            if (username.includes(" ")) {
+                showError("username", 'Το username δεν πρέπει να περιέχει τον κενό χαρακτήρα!');
+                hasError = true;
+            }
         
             let passwordValid = false;
             if (password.length < 5) {
@@ -165,23 +168,32 @@
                 return;
             }
 
-            const newUser = {
-                firstname,
-                lastname,
-                role,
-                phone,
-                email,
-                username,
-                password
-            };
+            const formData = new FormData();
+            formData.append('action', 'register');
+            formData.append('firstname', firstname);
+            formData.append('lastname', lastname);
+            formData.append('role', role);
+            formData.append('phone', phone);
+            formData.append('email', email);
+            formData.append('username', username);
+            formData.append('password', password);
 
-            const result = registerUser(newUser);
-            if (result.success) {
-                alert('Η εγγραφή ολοκληρώθηκε επιτυχώς! Μπορείτε να συνδεθείτε.');
-                window.location.href = 'login.html';
-            } else {
-                showError("username", result.message);
-            }
+            fetch('profiles.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(text => {
+                if (text.trim() === 'success') {
+                    alert('Η εγγραφή ολοκληρώθηκε επιτυχώς! Μπορείτε να συνδεθείτε.');
+                    window.location.href = 'login.html';
+                } else {
+                    showError("username", text);
+                }
+            })
+            .catch(error => {
+                alert('Σφάλμα: ' + error);
+            });
         });
     </script>
 </body>
