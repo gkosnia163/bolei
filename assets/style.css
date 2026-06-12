@@ -606,9 +606,8 @@ h1 {
     text-decoration: none;
 }
 
-/*Τρεις ταχύτητες*/
 
-/* 1. SMARTPHONES */
+/*-----------------------------------------------*/
 @media screen and (max-width: 600px) {
     body {
         padding-top: 80px;
@@ -751,7 +750,6 @@ h1 {
     }
 }
 
-/*  TABLETS */
 @media screen and (min-width: 601px) and (max-width: 1024px) {
     .ranking-menu, .ranking-item {
         grid-template-columns: 40px 2fr 0.8fr 0.8fr 0.8fr 1fr;
@@ -760,7 +758,7 @@ h1 {
     
     .ranking-menu > span:nth-child(n+7),
     .ranking-item > span:nth-child(n+7) {
-        display: none; /* Hide very detailed stats */
+        display: none; 
     }
 
     .selection-item {
@@ -768,10 +766,16 @@ h1 {
     }
 }
 
-/* LAPTOPS/DESKTOPS */
 @media screen and (min-width: 1025px) {
     .container {
         max-width: 1200px;
         margin: 0 auto;
     }
+}
+
+.error-msg {
+    color: red;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    display: block;
 }

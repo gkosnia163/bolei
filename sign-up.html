@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bolei</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
     <a href="index.html" class="logo">
-        <img src="images/mpalabolei.png" alt="Home">
+        <img src="assets/images/mpalabolei.png" alt="Home">
         <span>Bolei</span> 
     </a>
     
@@ -20,10 +20,12 @@
                     <div class="form-section">
                         <label for="firstname">Όνομα</label>
                         <input type="text" id="firstname" name="firstname" required>
+                        <span class="error-msg" id="firstname-error"></span>
                     </div>
                     <div class="form-section">
                         <label for="lastname">Επίθετο</label>
                         <input type="text" id="lastname" name="lastname" required>
+                        <span class="error-msg" id="lastname-error"></span>
                     </div>
                 </div>
 
@@ -34,32 +36,38 @@
                         <option value="manager">Διαχειριστής Ομάδας</option>
                         <option value="referee">Διαιτητής</option>
                     </select>
+                    <span class="error-msg" id="role-error"></span>
                 </div>
 
                 <div class="grid-2-col">
                     <div class="form-section">
                         <label for="phone">Τηλέφωνο</label>
                         <input type="tel" id="phone" name="phone" required>
+                        <span class="error-msg" id="phone-error"></span>
                     </div>
                     <div class="form-section">
                         <label for="email">Email</label>
                         <input type="email" id="email" name="email" required>
+                        <span class="error-msg" id="email-error"></span>
                     </div>
                 </div>
 
                 <div class="form-section">
                     <label for="username">Username</label>
                     <input type="text" id="username" name="username" required>
+                    <span class="error-msg" id="username-error"></span>
                 </div>
 
                 <div class="grid-2-col">
                     <div class="form-section">
                         <label for="password">Password</label>
                         <input type="password" id="password" name="password" required>
+                        <span class="error-msg" id="password-error"></span>
                     </div>
                     <div class="form-section">
                         <label for="confirm-password">Confirm Password</label>
                         <input type="password" id="confirm-password" name="confirm-password" required>
+                        <span class="error-msg" id="confirm-password-error"></span>
                     </div>
                 </div>
 
@@ -68,5 +76,113 @@
             </form>
         </div>
     </div>
+    <script src="profiles.js"></script>
+    <script>
+        function showError(inputId, message) {
+            document.getElementById(inputId).style.borderColor = 'red';
+            const errorSpan = document.getElementById(inputId + '-error');
+            if (errorSpan) {
+                errorSpan.textContent = message;
+            }
+        }
+
+        document.getElementById('signup-form').addEventListener('submit', function(e){
+            e.preventDefault();
+            let hasError = false;
+
+            const firstname = document.getElementById("firstname").value;
+            const lastname = document.getElementById("lastname").value;
+            const role = document.getElementById("role").value;
+            const phone = document.getElementById("phone").value;
+            const email = document.getElementById("email").value;
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            const confirmPassword = document.getElementById("confirm-password").value;
+
+            let firstNameHasDigit = false;
+            for (let i = 0; i < firstname.length; i++) {
+                if (firstname[i] >= '0' && firstname[i] <= '9') {
+                    firstNameHasDigit = true;
+                    break;
+                }
+            }
+            if (firstNameHasDigit) {
+                showError("firstname", 'To όνομα περιλαμβάνει αριθμό!');
+                hasError = true;
+            }
+
+            let lastNameHasDigit = false;
+            for (let i = 0; i < lastname.length; i++) {
+                if (lastname[i] >= '0' && lastname[i] <= '9') {
+                    lastNameHasDigit = true;
+                    break;
+                }
+            }
+            if (lastNameHasDigit) {
+                showError("lastname", 'To επίθετο περιλαμβάνει αριθμό!');
+                hasError = true;
+            }
+            
+            let phoneValid = true;
+            if (phone.length !== 10) {
+                phoneValid = false;
+            } else {
+                for (let i = 0; i < phone.length; i++) {
+                    if (isNaN(phone[i]) || phone[i] === " ") {
+                        phoneValid = false;
+                        break;
+                    }
+                }
+            }
+            if (!phoneValid) {
+                showError("phone", 'To τηλέφωνο πρέπει να αποτελείται από ακριβώς 10 ψηφία!');
+                hasError = true;
+            }
+        
+            let passwordValid = false;
+            if (password.length < 5) {
+                passwordValid = false;
+            } else {
+                const punctuation = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~';              
+                for (const char of password){
+                    if (punctuation.includes(char)){
+                        passwordValid = true;
+                        break;
+                    }
+                }
+            }
+            if (!passwordValid){
+                showError("password", 'Ο κωδικός πρέπει να περιέχει τουλάχιστον ένα σημείο στίξης!');
+                hasError = true;
+            }
+
+            if (password !== confirmPassword) {
+                showError("confirm-password", 'Οι κωδικοί δεν ταιριάζουν!');
+                hasError = true;
+            }
+
+            if (hasError) {
+                return;
+            }
+
+            const newUser = {
+                firstname,
+                lastname,
+                role,
+                phone,
+                email,
+                username,
+                password
+            };
+
+            const result = registerUser(newUser);
+            if (result.success) {
+                alert('Η εγγραφή ολοκληρώθηκε επιτυχώς! Μπορείτε να συνδεθείτε.');
+                window.location.href = 'login.html';
+            } else {
+                showError("username", result.message);
+            }
+        });
+    </script>
 </body>
 </html>

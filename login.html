@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bolei</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
     <a href="index.html" class="logo">
-        <img src="images/mpalabolei.png" alt="Home">
+        <img src="assets/images/mpalabolei.png" alt="Home">
         <span>Bolei</span> 
     </a>
     
@@ -19,11 +19,13 @@
                 <div class="form-section">
                     <label for="username">Username</label>
                     <input type="text" id="username" name="username" required>
+                    <span class="error-msg" id="username-error"></span>
                 </div>
 
                 <div class="form-section">
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password" required>
+                    <span class="error-msg" id="password-error"></span>
                 </div>
 
                 <button type="submit" class="submit-btn">Συνδεση</button>
@@ -32,5 +34,34 @@
             </form>
         </div>
     </div>
+    <script src="profiles.js"></script>
+    <script>
+        function showError(inputId, message) {
+            document.getElementById(inputId).style.borderColor = 'red';
+            const errorSpan = document.getElementById(inputId + '-error');
+            if (errorSpan) {
+                errorSpan.textContent = message;
+            }
+        }
+
+        document.getElementById('login-form').addEventListener('submit', function(e){
+            e.preventDefault();
+
+            const usernameInput = document.getElementById("username");
+            const passwordInput = document.getElementById("password");
+
+            const username = usernameInput.value;
+            const password = passwordInput.value;
+
+            const result = loginUser(username, password);
+            
+            if (result.success) {
+                window.location.href = 'index.html';
+            } else {
+                usernameInput.style.borderColor = 'red';
+                showError("password", result.message);
+            }
+        });
+    </script>
 </body>
 </html>

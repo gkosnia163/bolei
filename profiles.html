@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolei</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <a href="index.html" class="logo">
+        <img src="assets/images/mpalabolei.png" alt="Home">
+        <span>Bolei</span> 
+    </a>
+
+    <div class="form-container">
+        <div class="form-card">
+            <div class="form-header">ΑΛΛΑΓΗ ΣΤΟΙΧΕΙΩΝ ΠΡΟΦΙΛ</div>
+            <form id="change-form" class="result-form">
+                <div class="grid-2-col">
+                    <div class="form-section">
+                        <label for="firstname">Νέο Όνομα</label>
+                        <input type="text" id="firstname" name="firstname" required>
+                    </div>
+                    <div class="form-section">
+                        <label for="lastname">Νέο Επίθετο</label>
+                        <input type="text" id="lastname" name="lastname" required>
+                    </div>
+                </div>
+
+                <div class="grid-2-col">
+                    <div class="form-section">
+                        <label for="phone">Νέο Τηλέφωνο</label>
+                        <input type="tel" id="phone" name="phone" required>
+                        <span class="error-msg" id="phone-error"></span>
+                    </div>
+                    <div class="form-section">
+                        <label for="email">Νέο Email</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error-msg" id="email-error"></span>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <label for="password">Νέο Password</label>
+                    <input type="password" id="password" name="password" required>
+                    <span class="error-msg" id="password-error"></span>
+                </div>
+                <div class="form-section">
+                    <label for="password">Παλιό Password *</label>
+                    <input type="password" id="password" name="password" required>
+                    <span class="error-msg" id="password-error"></span>
+                </div>
+
+                <button type="submit" class="submit-btn">ΑΠΟΘΗΚΕΥΣΗ</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        //to script den to exw testarei
+        document.getElementById('change-form').addEventListener('submit', function(e){
+            e.preventDefault();
+            let hasError = false;
+
+            if (document.getElementById("firstname").value) {
+                const firstname = document.getElementById("firstname").value;
+                let firstNameHasDigit = false;
+                for (let i = 0; i < firstname.length; i++) {
+                    if (firstname[i] >= '0' && firstname[i] <= '9') {
+                        firstNameHasDigit = true;
+                        break;
+                    }
+                }
+                if (firstNameHasDigit) {
+                    showError("firstname", 'To όνομα περιλαμβάνει αριθμό!');
+                    hasError = true;
+                }
+            }
+            if (document.getElementById("lastname").value) {
+                const lastname = document.getElementById("lastname").value;
+                let lastNameHasDigit = false;
+                for (let i = 0; i < lastname.length; i++) {
+                    if (lastname[i] >= '0' && lastname[i] <= '9') {
+                        lastNameHasDigit = true;
+                        break;
+                    }
+                }
+                if (lastNameHasDigit) {
+                    showError("lastname", 'To επίθετο περιλαμβάνει αριθμό!');
+                    hasError = true;
+                }
+            }
+            if (document.getElementById("phone").value) {
+                const phone = document.getElementById("phone").value;
+                let phoneValid = true;
+                if (phone.length !== 10) {
+                    phoneValid = false;
+                } else {
+                    for (let i = 0; i < phone.length; i++) {
+                        if (isNaN(phone[i]) || phone[i] === " ") {
+                            phoneValid = false;
+                            break;
+                        }
+                    }
+                }
+                if (!phoneValid) {
+                    showError("phone", 'To τηλέφωνο πρέπει να αποτελείται από ακριβώς 10 ψηφία!');
+                    hasError = true;
+                }
+            }
+            if (document.getElementById("password").value) {
+                const password = document.getElementById("password").value;
+                let passwordValid = false;
+                if (password.length < 5) {
+                    passwordValid = false;
+                } else {
+                    const punctuation = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~';              
+                    for (const char of password){
+                        if (punctuation.includes(char)){
+                            passwordValid = true;
+                            break;
+                        }
+                    }
+                }
+                if (!passwordValid){
+                    showError("password", 'Ο κωδικός πρέπει να περιέχει τουλάχιστον ένα σημείο στίξης!');
+                    hasError = true;
+                }
+
+                if (password !== confirmPassword) {
+                    showError("confirm-password", 'Οι κωδικοί δεν ταιριάζουν!');
+                    hasError = true;
+                }
+
+            if (hasError) {
+                return;
+            }
+
+            const newUser = { //lgk tha thelei polles allages 
+                firstname,
+                lastname,
+                phone,
+                email,
+                password
+            };
+            
+            const result = updateUserProfile(newUser)
+
+            }
+        })
+    </script>
+</body>
+</html>
