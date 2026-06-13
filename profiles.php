@@ -92,5 +92,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
         echo "success";
         exit;
     }
+
+    if ($action === 'get_current_user') {
+        header('Content-Type: application/json');
+        if (isset($_SESSION['user'])) {
+            echo json_encode($_SESSION['user']);
+        } else {
+            echo json_encode(null);
+        }
+        exit;
+    }
 }
 ?>

@@ -63,17 +63,6 @@
             }
         }
 
-        function clearErrors() {
-            const inputs = document.querySelectorAll('#change-form input');
-            inputs.forEach(input => {
-                input.style.borderColor = '';
-                const errorSpan = document.getElementById(input.id + '-error');
-                if (errorSpan) {
-                    errorSpan.textContent = '';
-                }
-            });
-        }
-
         const currentUser = getCurrentUser();
         if (!currentUser) {
             alert("Παρακαλώ συνδεθείτε πρώτα.");
@@ -164,6 +153,7 @@
                 }
 
                 const newUser = { 
+                    currentUser,
                     firstname: firstnameInput || currentUser.firstname,
                     lastname: lastnameInput || currentUser.lastname,
                     phone: phoneInput || currentUser.phone,
