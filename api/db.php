@@ -8,4 +8,3 @@ if (!$con) {
 
 mysqli_select_db($con, "bolei_db");
 mysqli_set_charset($con, "utf8");
-?>

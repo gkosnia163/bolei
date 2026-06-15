@@ -1,15 +1,15 @@
 <?php
 session_start();
-require 'db.php';
+require 'api/db.php';
 
 $message = "";
 
-if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'referee') {
-    die("Πρόσβαση επιτρέπεται μόνο σε διαιτητές.");
+if (!isset($_SESSION['user']) || !in_array($_SESSION['user']['role'], ['referee', 'admin'])) {
+    die("Πρόσβαση επιτρέπεται μόνο σε διαιτητές και διαχειριστές.");
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $match_id = isset($_POST['match_id']) ? intval($_POST['match_id']) : 0;
+    $match_id = isset($_POST['match_id']) ? intval($_POST['match_id']) : 0;//if 
     
     $set1_home = $_POST['set1_home'];
     $set1_away = $_POST['set1_away'];
@@ -22,7 +22,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $set5_home = !empty($_POST['set5_home']) ? $_POST['set5_home'] : null;
     $set5_away = !empty($_POST['set5_away']) ? $_POST['set5_away'] : null;
 
-    // File upload logic for match sheet
     $upload_dir = 'uploads/';
     if (!is_dir($upload_dir)) {
         mkdir($upload_dir, 0777, true);
@@ -38,25 +37,35 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         die("Σφάλμα στο ανέβασμα του φύλλου αγώνα.");
     }
 
-    // Insert result into database as 'pending'
+    //db syndesh
     $query = "INSERT INTO match_results (match_id, set1_home, set1_away, set2_home, set2_away, set3_home, set3_away, set4_home, set4_away, set5_home, set5_away, match_sheet, status) 
               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'pending')";
               
-    $stmt = mysqli_prepare($con, $query);
-    if ($stmt) {
-        mysqli_stmt_bind_param($stmt, "iiiiiiiiiiis", $match_id, $set1_home, $set1_away, $set2_home, $set2_away, $set3_home, $set3_away, $set4_home, $set4_away, $set5_home, $set5_away, $match_sheet_path);
-        
-        if (mysqli_stmt_execute($stmt)) {
-            $message = "Το αποτέλεσμα υποβλήθηκε επιτυχώς! Βρίσκεται σε κατάσταση 'pending' και αναμένει επικύρωση από τον διαχειριστή.";
+    try { //bgalto ayto
+        $stmt = mysqli_prepare($con, $query);
+        if ($stmt) {
+            mysqli_stmt_bind_param($stmt, "iiiiiiiiiiis", $match_id, $set1_home, $set1_away, $set2_home, $set2_away, $set3_home, $set3_away, $set4_home, $set4_away, $set5_home, $set5_away, $match_sheet_path);
+            
+            if (mysqli_stmt_execute($stmt)) {
+                $message = "Το αποτέλεσμα υποβλήθηκε επιτυχώς! Βρίσκεται σε κατάσταση 'pending' και αναμένει επικύρωση από τον διαχειριστή.";
+            } else {
+                $message = "Σφάλμα κατά την υποβολή (execute): " . mysqli_error($con);
+            }
         } else {
-            $message = "Σφάλμα κατά την υποβολή: " . mysqli_error($con);
+            $message = "Σφάλμα στη βάση δεδομένων (prepare): " . mysqli_error($con);
         }
-    } else {
-        $message = "Σφάλμα στη βάση δεδομένων: " . mysqli_error($con);
+    } catch (Exception $e) {
+        $message = "Σφάλμα βάσης δεδομένων (Exception): " . $e->getMessage();
     }
 }
 
-$match_id_get = isset($_GET['match_id']) ? intval($_GET['match_id']) : 0;
+// Preserve match_id whether it comes from GET (initial load) or POST (after submission)
+$match_id_get = 0;
+if (isset($_GET['match_id'])) {
+    $match_id_get = intval($_GET['match_id']);
+} elseif (isset($_POST['match_id'])) {
+    $match_id_get = intval($_POST['match_id']);
+}
 ?>
 <!DOCTYPE html>
 <html lang="el">

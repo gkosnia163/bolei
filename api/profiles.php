@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'db.php'; 
+require_once 'db.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
     $action = $_POST['action'];
@@ -83,6 +83,59 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
             echo "success";
         } else {
             echo "Πρόβλημα κατά την ενημέρωση: " . mysqli_error($con);
+        }
+        exit;
+    }
+
+    if ($action === 'get_all_users') {
+        header('Content-Type: application/json');
+        if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== 'admin') {
+            echo json_encode(['error' => 'Unauthorized']);
+            exit;
+        }
+
+        $role_filter = isset($_POST['role_filter']) ? $_POST['role_filter'] : '';
+        $status_filter = isset($_POST['status_filter']) ? $_POST['status_filter'] : '';
+
+        $query = "SELECT id, firstname, lastname, email, username, phone, role, status FROM users WHERE 1=1";
+        
+        if ($role_filter) {
+            $query .= " AND role = '" . mysqli_real_escape_string($con, $role_filter) . "'";
+        }
+        if ($status_filter) {
+            $query .= " AND status = '" . mysqli_real_escape_string($con, $status_filter) . "'";
+        }
+
+        $result = mysqli_query($con, $query);
+        $users = [];
+        if ($result) {
+            while ($row = mysqli_fetch_assoc($result)) {
+                $users[] = $row;
+            }
+        }
+        echo json_encode($users);
+        exit;
+    }
+
+    if ($action === 'update_user_status') {
+        if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== 'admin') {
+            echo "Unauthorized";
+            exit;
+        }
+
+        $user_id = intval($_POST['user_id']);
+        $new_status = $_POST['new_status']; 
+
+        if ($new_status === 'delete') {
+            $query = "DELETE FROM users WHERE id = $user_id";
+        } else {
+            $query = "UPDATE users SET status = '" . mysqli_real_escape_string($con, $new_status) . "' WHERE id = $user_id";
+        }
+
+        if (mysqli_query($con, $query)) {
+            echo "success";
+        } else {
+            echo "Σφάλμα: " . mysqli_error($con);
         }
         exit;
     }

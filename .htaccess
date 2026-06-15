@@ -1,0 +1,26 @@
+RewriteEngine On
+
+# Allow POST requests to `/api/add`
+RewriteCond %{REQUEST_METHOD} POST
+RewriteRule ^api/add$ api.php [QSA,L]
+
+# Allow GET requests to `/api/{id}` where `{id}` is numeric
+RewriteCond %{REQUEST_METHOD} GET
+RewriteRule ^api/([0-9]+)$ api.php?id=$1 [QSA,L]
+
+# Allow GET requests to `/api/all`
+RewriteCond %{REQUEST_METHOD} GET
+RewriteRule ^api/all$ api.php [QSA,L]
+
+# Allow PUT requests to `/api/{id}` where `{id}` is numeric
+RewriteCond %{REQUEST_METHOD} PUT
+RewriteRule ^api/([0-9]+)$ api.php?id=$1 [QSA,L]
+
+# Allow DELETE requests to `/api/{id}` where `{id}` is numeric
+RewriteCond %{REQUEST_METHOD} DELETE
+RewriteRule ^api/([0-9]+)$ api.php?id=$1 [QSA,L]
+
+# Block all other requests to `/api` (only if they start with api/ literally and don't match above)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^api(/.*)?$ - [F]

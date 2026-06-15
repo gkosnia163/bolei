@@ -1,0 +1,1449 @@
+[
+    {
+        "name": "AEK",
+        "logo": "assets\/images-club\/aek.jpeg",
+        "team_photo": "assets\/images-club\/aekteam.jpeg",
+        "youtube": "https:\/\/www.youtube.com\/embed\/5m8_oyNSt9M",
+        "site": "https:\/\/www.enwsi.gr\/aek\/volley",
+        "coach": "Κωνσταντίνος Ταμπουρατζής",
+        "players": [
+            {
+                "number": "1",
+                "name": "Μαρία Κλέπκου",
+                "position": "Outside Hitter",
+                "birthdate": "13\/05\/2000",
+                "height": "1.79"
+            },
+            {
+                "number": "2",
+                "name": "Σουλτάνα Κιουτσιούκη",
+                "position": "Middle Blocker",
+                "birthdate": "24\/09\/1996",
+                "height": "1.86"
+            },
+            {
+                "number": "6",
+                "name": "Μαρίνα Στάικου",
+                "position": "Setter",
+                "birthdate": "24\/08\/2004",
+                "height": "1.76"
+            },
+            {
+                "number": "9",
+                "name": "Εβίτα Ξηντάρα",
+                "position": "Libero",
+                "birthdate": "09\/02\/1993",
+                "height": "1.73"
+            },
+            {
+                "number": "10",
+                "name": "Katerina Valkova",
+                "position": "Setter",
+                "birthdate": "06\/02\/1996",
+                "height": "1.77"
+            },
+            {
+                "number": "11",
+                "name": "Andriana Maria Matei",
+                "position": "Outside Hitter",
+                "birthdate": "24\/05\/1998",
+                "height": "1.78"
+            },
+            {
+                "number": "12",
+                "name": "Χαϊδίτσα Μήλιου",
+                "position": "Middle Blocker",
+                "birthdate": "15\/04\/2004",
+                "height": "1.83"
+            },
+            {
+                "number": "13",
+                "name": "Guewe Diouf",
+                "position": "Outside Hitter",
+                "birthdate": "15\/06\/2002",
+                "height": "1.85"
+            },
+            {
+                "number": "15",
+                "name": "Αγγελική Καββαδία",
+                "position": "Middle Blocker",
+                "birthdate": "17\/02\/1994",
+                "height": "1.89"
+            },
+            {
+                "number": "17",
+                "name": "Tuktu Burcu Yuzgenc",
+                "position": "Opposite",
+                "birthdate": "15\/01\/1999",
+                "height": "1.92"
+            },
+            {
+                "number": "20",
+                "name": "Σταματία Κυπαρίσση",
+                "position": "Outside Hitter",
+                "birthdate": "20\/06\/2002",
+                "height": "1.84"
+            },
+            {
+                "number": "21",
+                "name": "Φωτεινή Βουλγαράκη",
+                "position": "Libero",
+                "birthdate": "18\/04\/2003",
+                "height": "1.65"
+            },
+            {
+                "number": "33",
+                "name": "Sydni Schetnan",
+                "position": "Middle Blocker",
+                "birthdate": "12\/12\/2002",
+                "height": "1.96"
+            }
+        ]
+    },
+    {
+        "name": "Α.Ο. ΘΗΡΑΣ",
+        "logo": "assets\/images-club\/THIRA.jpeg",
+        "team_photo": "assets\/images-club\/thirateam.jpeg",
+        "youtube": "https:\/\/www.youtube.com\/embed\/i_3aX2_nAeQ",
+        "site": "https:\/\/aothiras.gr\/",
+        "coach": "Μανώλης Σκουλικάρης",
+        "players": [
+            {
+                "number": "1",
+                "name": "Yadhira Anchante",
+                "position": "Setter",
+                "birthdate": "19\/11\/2002",
+                "height": "1.82"
+            },
+            {
+                "number": "4",
+                "name": "Katarina Pavicic",
+                "position": "Outside Hitter",
+                "birthdate": "17\/05\/1999",
+                "height": "1.80"
+            },
+            {
+                "number": "7",
+                "name": "Αναστασία Σιρίνινα",
+                "position": "Middle Blocker",
+                "birthdate": "25\/08\/1995",
+                "height": "1.87"
+            },
+            {
+                "number": "9",
+                "name": "Ευαγγελία Τουλγαρίδου",
+                "position": "Libero",
+                "birthdate": "14\/03\/1998",
+                "height": "1,63"
+            },
+            {
+                "number": "10",
+                "name": "Λίνα Σαουλίδου",
+                "position": "Libero",
+                "birthdate": "16\/11\/2004",
+                "height": "1.60"
+            },
+            {
+                "number": "11",
+                "name": "Ελευθερία Μπαρμπαλιού",
+                "position": "Setter",
+                "birthdate": "10\/01\/2000",
+                "height": "1.76"
+            },
+            {
+                "number": "12",
+                "name": "Rica Maase",
+                "position": "Opposite",
+                "birthdate": "22\/11\/1999",
+                "height": "1.86"
+            },
+            {
+                "number": "13",
+                "name": "Αθηνά Δημητριάδη",
+                "position": "Middle Blocker",
+                "birthdate": "06\/06\/2000",
+                "height": "1.95"
+            },
+            {
+                "number": "15",
+                "name": "Χριστίνα Θωμαΐδου",
+                "position": "Outside Hitter",
+                "birthdate": "11\/08\/1999",
+                "height": "1.74"
+            },
+            {
+                "number": "16",
+                "name": "Μαρία Γενιτσαρίδη",
+                "position": "Outside Hitter",
+                "birthdate": "03\/06\/1994",
+                "height": "1.85"
+            },
+            {
+                "number": "18",
+                "name": "Ανδρομάχη Τσιόγκα",
+                "position": "Middle Blocker",
+                "birthdate": "03\/11\/2001",
+                "height": "1.90"
+            },
+            {
+                "number": "27",
+                "name": "Symone Abbott",
+                "position": "Outside Hitter",
+                "birthdate": "27\/09\/1996",
+                "height": "1.86"
+            },
+            {
+                "number": "29",
+                "name": "Yuliia Mirtskhulava",
+                "position": "Outside Hitter",
+                "birthdate": "02\/04\/1998",
+                "height": "1.76"
+            },
+            {
+                "number": "30",
+                "name": "Αναστασία Κεραμιτσοπούλου",
+                "position": "Opposite",
+                "birthdate": "20\/08\/2003",
+                "height": "1.85"
+            }
+        ]
+    },
+    {
+        "name": "Α.Ο. Μαρκόπουλο",
+        "logo": "assets\/images-club\/revoiltf.jpeg",
+        "team_photo": "assets\/images-club\/markopoulogang.jpeg",
+        "youtube": "https:\/\/www.youtube.com\/embed\/rjQKns_Vs0k",
+        "site": "http:\/\/aom.gr\/",
+        "coach": "Γιώργος Ρούσης",
+        "players": [
+            {
+                "number": "2",
+                "name": "Υακίνθη Οικονόμου",
+                "position": "Middle Blocker",
+                "birthdate": "16\/10\/2007",
+                "height": "1.85"
+            },
+            {
+                "number": "3",
+                "name": "Chloe Maree Walker",
+                "position": "Middle Blocker",
+                "birthdate": "13\/02\/2005",
+                "height": "1.91"
+            },
+            {
+                "number": "5",
+                "name": "Νίκη Κωτσαρά",
+                "position": "Outside Hitter",
+                "birthdate": "11\/12\/2004",
+                "height": "1.85"
+            },
+            {
+                "number": "6",
+                "name": "Vitalia Marmen",
+                "position": "Outside Hitter",
+                "birthdate": "03\/02\/1997",
+                "height": "1.87"
+            },
+            {
+                "number": "7",
+                "name": "Κατερίνα Αλλαγιάννη",
+                "position": "Middle Blocker",
+                "birthdate": "15\/06\/2004",
+                "height": "1.88"
+            },
+            {
+                "number": "8",
+                "name": "Αθανασία Ανδριοπούλου",
+                "position": "Outside Hitter",
+                "birthdate": "31\/03\/2009",
+                "height": "1.90"
+            },
+            {
+                "number": "9",
+                "name": "Αναστασία Δήμου",
+                "position": "Libero",
+                "birthdate": "20\/07\/2004",
+                "height": "1.68"
+            },
+            {
+                "number": "10",
+                "name": "Δωροθέα Χριστίνα Καράγκουτη",
+                "position": "Outside Hitter",
+                "birthdate": "30\/03\/2010",
+                "height": "1.92"
+            },
+            {
+                "number": "11",
+                "name": "Όλγα Λογαρά",
+                "position": "Setter",
+                "birthdate": "08\/11\/1999",
+                "height": "1.85"
+            },
+            {
+                "number": "12",
+                "name": "Μαρκέλλα Φραγκομίχαλου",
+                "position": "Libero",
+                "birthdate": "06\/08\/2004",
+                "height": "1.70"
+            },
+            {
+                "number": "14",
+                "name": "Διονυσία Μάτιου",
+                "position": "Libero",
+                "birthdate": "13\/08\/2001",
+                "height": "1.73"
+            },
+            {
+                "number": "16",
+                "name": "Αριάδνη Καθάριου",
+                "position": "Middle Blocker",
+                "birthdate": "28\/11\/2000",
+                "height": "1.85"
+            },
+            {
+                "number": "17",
+                "name": "Αναστασία Τριανταφύλλου",
+                "position": "Libero",
+                "birthdate": "09\/01\/2008",
+                "height": "1.72"
+            },
+            {
+                "number": "18",
+                "name": "Αντιγόνη Δήμου",
+                "position": "Opposite",
+                "birthdate": "09\/09\/2009",
+                "height": "1.90"
+            },
+            {
+                "number": "19",
+                "name": "Άννα-Μαρία Σπανού",
+                "position": "Outside Hitter",
+                "birthdate": "18\/11\/1995",
+                "height": "1.88"
+            },
+            {
+                "number": "20",
+                "name": "Kveta Grabovska",
+                "position": "Setter",
+                "birthdate": "29\/05\/2002",
+                "height": "1.80"
+            },
+            {
+                "number": "23",
+                "name": "Viktoriia Lokhmanchuk",
+                "position": "Opposite",
+                "birthdate": "09\/05\/2001",
+                "height": "1.94"
+            }
+        ]
+    },
+    {
+        "name": "Α.Ο.Ν.Σ. ΜΙΛΩΝ",
+        "logo": "assets\/images-club\/milwn.jpeg",
+        "team_photo": "assets\/images-club\/miloiteam.jpeg",
+        "youtube": "https:\/\/www.youtube.com\/embed\/5m8_oyNSt9M",
+        "site": "https:\/\/aonsmilon.gr\/",
+        "coach": "Κώστας Παπαδόπουλος",
+        "players": [
+            {
+                "number": "1",
+                "name": "Έλενα Λεονταρίδου",
+                "position": "Middle Blocker",
+                "birthdate": "16\/03\/2001",
+                "height": "1.86"
+            },
+            {
+                "number": "2",
+                "name": "Νεφέλη Χατζηγρηγορίου",
+                "position": "Setter",
+                "birthdate": "21\/05\/2002",
+                "height": "1.81"
+            },
+            {
+                "number": "4",
+                "name": "Μαργαρίτα Χάνα",
+                "position": "Libero",
+                "birthdate": "01\/01\/1997",
+                "height": "1.65"
+            },
+            {
+                "number": "5",
+                "name": "Madyson Elizabeth Saris",
+                "position": "Outside Hitter",
+                "birthdate": "09\/11\/2003",
+                "height": "1.86"
+            },
+            {
+                "number": "6",
+                "name": "Monica Huchon Salkute",
+                "position": "Outside Hitter",
+                "birthdate": "03\/05\/1993",
+                "height": "1.85"
+            },
+            {
+                "number": "7",
+                "name": "Παυλίνα Κίντου",
+                "position": "Opposite, Outside Hitter",
+                "birthdate": "28\/06\/2006",
+                "height": "1.78"
+            },
+            {
+                "number": "8",
+                "name": "Αμαλία Σκουλούδη",
+                "position": "Middle Blocker",
+                "birthdate": "19\/07\/2004",
+                "height": "1.86"
+            },
+            {
+                "number": "11",
+                "name": "Λαμπριάννα Πήττα",
+                "position": "Middle Blocker",
+                "birthdate": "30\/01\/1998",
+                "height": "1.83"
+            },
+            {
+                "number": "14",
+                "name": "Γεωργία Ωραιοπούλου",
+                "position": "Libero",
+                "birthdate": "16\/10\/2002",
+                "height": "1.71"
+            },
+            {
+                "number": "15",
+                "name": "Αγάπη Μπρουκς",
+                "position": "Outside Hitter",
+                "birthdate": "10\/03\/2003",
+                "height": "1.80"
+            },
+            {
+                "number": "16",
+                "name": "Κασιανή Αμπατζή",
+                "position": "Middle Blocker",
+                "birthdate": "16\/10\/2008",
+                "height": "1.81"
+            },
+            {
+                "number": "18",
+                "name": "Παρασκευή Ζαφειρίου",
+                "position": "Outside Hitter",
+                "birthdate": "08\/06\/2006",
+                "height": "1.79"
+            },
+            {
+                "number": "19",
+                "name": "Γεωργία Αργυρίου",
+                "position": "Middle Blocker",
+                "birthdate": "12\/11\/1988",
+                "height": "1.84"
+            },
+            {
+                "number": "21",
+                "name": "Paula Weronika Zaborowska",
+                "position": "Setter",
+                "birthdate": "07\/06\/2000",
+                "height": "1.79"
+            },
+            {
+                "number": "92",
+                "name": "Kadi Kullerkann",
+                "position": "Opposite",
+                "birthdate": "19\/08\/1992",
+                "height": "1.95"
+            }
+        ]
+    },
+    {
+        "name": "Α.Σ. ΑΡΗΣ",
+        "logo": "assets\/images-club\/aris.jpeg",
+        "team_photo": "assets\/images-club\/aristeam.jpeg",
+        "youtube": "https:\/\/www.youtube.com\/embed\/5m8_oyNSt9M",
+        "site": "https:\/\/arisvolleyball.gr\/",
+        "coach": "Χρήστος Πάτρας",
+        "players": [
+            {
+                "number": "1",
+                "name": "Σοφία Τόλιου",
+                "position": "Setter",
+                "birthdate": "01\/07\/2002",
+                "height": "1.76"
+            },
+            {
+                "number": "2",
+                "name": "Veronica Oluoch",
+                "position": "Opposite",
+                "birthdate": "05\/06\/1999",
+                "height": "1.80"
+            },
+            {
+                "number": "5",
+                "name": "Ιωάννα Πολυνοπούλου",
+                "position": "Middle Blocker",
+                "birthdate": "09\/04\/1995",
+                "height": "1.80"
+            },
+            {
+                "number": "6",
+                "name": "Νικολέτα Πλακιά",
+                "position": "Middle Blocker",
+                "birthdate": "22\/06\/2002",
+                "height": "1.85"
+            },
+            {
+                "number": "7",
+                "name": "Εβελίνα Γζουντέλλη",
+                "position": "Outside Hitter",
+                "birthdate": "06\/04\/2011",
+                "height": "1.76"
+            },
+            {
+                "number": "9",
+                "name": "Φωτεινή Μπαρμπαλιού",
+                "position": "Opposite",
+                "birthdate": "16\/05\/2008",
+                "height": "1.85"
+            },
+            {
+                "number": "10",
+                "name": "Ευαγγελία Μερτέκη",
+                "position": "Outside Hitter",
+                "birthdate": "29\/04\/1991",
+                "height": "1.90"
+            },
+            {
+                "number": "11",
+                "name": "Δέσποινα Λαμπριανίδου",
+                "position": "Middle Blocker",
+                "birthdate": "10\/02\/2004",
+                "height": "1.96"
+            },
+            {
+                "number": "12",
+                "name": "Καλλιόπη Χαριστέα",
+                "position": "Outside Hitter",
+                "birthdate": "19\/10\/2010",
+                "height": "1.75"
+            },
+            {
+                "number": "15",
+                "name": "Θεοδώρα Ευθυμιοπούλου",
+                "position": "Libero",
+                "birthdate": "15\/07\/2005",
+                "height": "1.72"
+            },
+            {
+                "number": "17",
+                "name": "Κυριακή Αντωνιάδου",
+                "position": "Middle Blocker",
+                "birthdate": "23\/09\/2008",
+                "height": "1.85"
+            },
+            {
+                "number": "18",
+                "name": "Παναγιώτα Ξανθοπούλου",
+                "position": "Setter",
+                "birthdate": "21\/09\/1999",
+                "height": "1.80"
+            },
+            {
+                "number": "20",
+                "name": "Ιωάννα Λεοντζίνη",
+                "position": "Libero",
+                "birthdate": "03\/07\/2010",
+                "height": "1.60"
+            },
+            {
+                "number": "21",
+                "name": "Iuna Zadorojnai",
+                "position": "Opposite",
+                "birthdate": "08\/01\/2001",
+                "height": "1.90"
+            },
+            {
+                "number": "22",
+                "name": "Ευδοξία Γεωργιάδου",
+                "position": "Libero",
+                "birthdate": "29\/08\/1995",
+                "height": "1.63"
+            },
+            {
+                "number": "27",
+                "name": "Chard'e Alese Vanzandt",
+                "position": "Opposite",
+                "birthdate": "19\/07\/2002",
+                "height": "1.78"
+            },
+            {
+                "number": "28",
+                "name": "Sladjana Erić",
+                "position": "Middle Blocker",
+                "birthdate": "29\/07\/1983",
+                "height": "1.86"
+            },
+            {
+                "number": "77",
+                "name": "Κατερίνα Κοκότη",
+                "position": "Middle Blocker",
+                "birthdate": "21\/07\/2002",
+                "height": "1.82"
+            }
+        ]
+    },
+    {
+        "name": "Α.Σ.Π. ΘΕΤΙΣ",
+        "logo": "assets\/images-club\/THETIS.jpeg",
+        "team_photo": "assets\/images-club\/thetisteam.jpeg",
+        "youtube": "https:\/\/www.youtube.com\/embed\/5m8_oyNSt9M",
+        "site": "https:\/\/thetisvoulas.gr\/",
+        "coach": "Γιάννης Νικολάκης",
+        "players": [
+            {
+                "number": "1",
+                "name": "Elise Malia Ferreira",
+                "position": "Setter",
+                "birthdate": "26\/09\/2000",
+                "height": "1.77"
+            },
+            {
+                "number": "3",
+                "name": "Αθανασία Γκιαούρη",
+                "position": "Opposite",
+                "birthdate": "09\/11\/2006",
+                "height": "1.89"
+            },
+            {
+                "number": "4",
+                "name": "Κωνσταντίνα Βλαχάκη",
+                "position": "Outside Hitter",
+                "birthdate": "08\/05\/1995",
+                "height": "1.80"
+            },
+            {
+                "number": "5",
+                "name": "Ευαγγελία Γαροφαλάκη",
+                "position": "Setter",
+                "birthdate": "14\/04\/2003",
+                "height": "1.77"
+            },
+            {
+                "number": "6",
+                "name": "Αναστασία Φωκιανού",
+                "position": "Outside Hitter",
+                "birthdate": "05\/12\/1994",
+                "height": "1.80"
+            },
+            {
+                "number": "9",
+                "name": "Φανή Κοντονή",
+                "position": "Libero",
+                "birthdate": "15\/04\/2007",
+                "height": "1.72"
+            },
+            {
+                "number": "11",
+                "name": "Ραφαηλία Κυπαρίσση",
+                "position": "Middle Blocker",
+                "birthdate": "20\/07\/1999",
+                "height": "1.85"
+            },
+            {
+                "number": "12",
+                "name": "Γεωργία Σταυρινίδη",
+                "position": "Middle Blocker",
+                "birthdate": "30\/12\/2001",
+                "height": "1.90"
+            },
+            {
+                "number": "13",
+                "name": "Olivia Lane Utterback",
+                "position": "Opposite",
+                "birthdate": "19\/09\/2001",
+                "height": "1.83"
+            },
+            {
+                "number": "14",
+                "name": "Ελευθερία Μανιατογιάννη",
+                "position": "Libero",
+                "birthdate": "09\/12\/1995",
+                "height": "1.60"
+            },
+            {
+                "number": "16",
+                "name": "Agnes Pallag",
+                "position": "Outside Hitter",
+                "birthdate": "09\/12\/1995",
+                "height": "1.82"
+            },
+            {
+                "number": "17",
+                "name": "Αναστασία Ματσαρόκη",
+                "position": "Middle Blocker",
+                "birthdate": "10\/08\/1999",
+                "height": "1.85"
+            },
+            {
+                "number": "25",
+                "name": "Ασημίνα Νικολογιαννη",
+                "position": "Outside Hitter",
+                "birthdate": "04\/06\/1999",
+                "height": "1.84"
+            }
+        ]
+    },
+    {
+        "name": "Ζ.Α.Ο.Ν",
+        "logo": "assets\/images-club\/ZAON.jpeg",
+        "team_photo": "assets\/images-club\/zaonteam.jpeg",
+        "youtube": "https:\/\/www.youtube.com\/embed\/5m8_oyNSt9M",
+        "site": "https:\/\/zaon.gr\/",
+        "coach": "Χαράλαμπος Μυτσκίδης",
+        "players": [
+            {
+                "number": "1",
+                "name": "Κατερίνα Γιώτα",
+                "position": "Middle Blocker",
+                "birthdate": "03\/07\/1990",
+                "height": "1.84"
+            },
+            {
+                "number": "2",
+                "name": "Μαριάννα Μπελιά",
+                "position": "Libero",
+                "birthdate": "24\/10\/1998",
+                "height": "1.65"
+            },
+            {
+                "number": "3",
+                "name": "Ελπίδα Τικμανίδου",
+                "position": "Outside Hitter",
+                "birthdate": "29\/08\/2008",
+                "height": "1.82"
+            },
+            {
+                "number": "4",
+                "name": "Θεοδώρα Φουμάκη",
+                "position": "Setter",
+                "birthdate": "05\/08\/2005",
+                "height": "1.80"
+            },
+            {
+                "number": "5",
+                "name": "Ιωάννα Κασδοβασίλη",
+                "position": "Middle Blocker",
+                "birthdate": "13\/05\/1997",
+                "height": "1.82"
+            },
+            {
+                "number": "6",
+                "name": "Ευφροσύνη Αλεξάκου",
+                "position": "Outside Hitter",
+                "birthdate": "26\/02\/2000",
+                "height": "1.82"
+            },
+            {
+                "number": "7",
+                "name": "Φερονίκη Ζιώγα",
+                "position": "Opposite",
+                "birthdate": "25\/04\/1996",
+                "height": "1.84"
+            },
+            {
+                "number": "8",
+                "name": "Έρρικα Γράβαρη",
+                "position": "Middle Blocker",
+                "birthdate": "04\/11\/2006",
+                "height": "1.88"
+            },
+            {
+                "number": "10",
+                "name": "Desislava Nikolova",
+                "position": "Outside Hitter",
+                "birthdate": "21\/12\/1991",
+                "height": "1.82"
+            },
+            {
+                "number": "11",
+                "name": "Ελένη Μπλιάτσιου",
+                "position": "Outside Hitter",
+                "birthdate": "18\/12\/2001",
+                "height": "1.85"
+            },
+            {
+                "number": "12",
+                "name": "Χαρά Σπυροπούλου",
+                "position": "Libero",
+                "birthdate": "18\/09\/2001",
+                "height": "1.76"
+            },
+            {
+                "number": "14",
+                "name": "Marlena Kowalewska",
+                "position": "Setter",
+                "birthdate": "09\/01\/1992",
+                "height": "1.76"
+            },
+            {
+                "number": "24",
+                "name": "Lorenne Teixeira",
+                "position": "Opposite",
+                "birthdate": "08\/01\/1996",
+                "height": "1.87"
+            }
+        ]
+    },
+    {
+        "name": "ΗΛΥΣΙΑΚΟΣ Α.Ο.",
+        "logo": "assets\/images-club\/ILISIAKOS.jpeg",
+        "team_photo": "assets\/images-club\/ilisiakosteam.jpeg",
+        "youtube": "https:\/\/www.youtube.com\/embed\/5m8_oyNSt9M",
+        "site": "https:\/\/www.facebook.com\/ilisiakosvolleyball\/",
+        "coach": "Μαρία Αριστείδου",
+        "players": [
+            {
+                "number": "1",
+                "name": "Yasmour Mislina Kilic",
+                "position": "Outside Hitter",
+                "birthdate": "30\/03\/1996",
+                "height": "1.89"
+            },
+            {
+                "number": "3",
+                "name": "Χριστίνα Νικολαΐδη",
+                "position": "Middle Blocker",
+                "birthdate": "30\/03\/1996",
+                "height": "1.89"
+            },
+            {
+                "number": "4",
+                "name": "Μαριάννα Τσιάκου",
+                "position": "Outside Hitter",
+                "birthdate": "03\/04\/2007",
+                "height": "1.74"
+            },
+            {
+                "number": "5",
+                "name": "Φωτεινή Παπαϊωάννου",
+                "position": "Middle Blocker",
+                "birthdate": "07\/11\/2002",
+                "height": "1.86"
+            },
+            {
+                "number": "6",
+                "name": "Κατερίνα-Ελένη Σακκά",
+                "position": "Libero",
+                "birthdate": "21\/03\/2003",
+                "height": "1.70"
+            },
+            {
+                "number": "8",
+                "name": "Ειρήνη Αγγελοπούλου",
+                "position": "Opposite",
+                "birthdate": "02\/10\/2003",
+                "height": "1.82"
+            },
+            {
+                "number": "9",
+                "name": "Ερμίνα Γκέκοβιτς",
+                "position": "Outside Hitter",
+                "birthdate": "21\/05\/2005",
+                "height": "1.82"
+            },
+            {
+                "number": "12",
+                "name": "Γεωργία Μητακίδου",
+                "position": "Middle Blocker",
+                "birthdate": "14\/03\/1999",
+                "height": "1.87"
+            },
+            {
+                "number": "14",
+                "name": "Κατερίνα Σουφλέρη",
+                "position": "Setter",
+                "birthdate": "18\/03\/2004",
+                "height": "1.81"
+            },
+            {
+                "number": "15",
+                "name": "Σοφία Σακκά",
+                "position": "Setter",
+                "birthdate": "14\/08\/2003",
+                "height": "1.80"
+            },
+            {
+                "number": "18",
+                "name": "Ίρις Δασκαλοπούλου",
+                "position": "Setter",
+                "birthdate": "29\/10\/2009",
+                "height": "1.70"
+            },
+            {
+                "number": "30",
+                "name": "Γκαμπριέλα Πλεσέα",
+                "position": "Outside Hitter",
+                "birthdate": "08\/07\/2008",
+                "height": "1.74"
+            },
+            {
+                "number": "32",
+                "name": "Δάφνη Κορνακιά",
+                "position": "Outside Hitter",
+                "birthdate": "22\/08\/2012",
+                "height": "1.71"
+            }
+        ]
+    },
+    {
+        "name": "ΟΛΥΜΠΙΑΚΟΣ Σ.Φ.Π",
+        "logo": "assets\/images-club\/OLYMPIACOS.jpeg",
+        "team_photo": "assets\/images-club\/osfpteam.webp",
+        "youtube": "https:\/\/www.youtube.com\/embed\/5m8_oyNSt9M",
+        "site": "https:\/\/www.olympiacossfp.gr\/index.php\/tmimata-el\/volley-gynaikwn-el",
+        "coach": "Branko Kovačević",
+        "players": [
+            {
+                "number": "1",
+                "name": "Χρύσα Καραγιάννη",
+                "position": "Middle Blocker",
+                "birthdate": "07\/06\/2008",
+                "height": "1.83"
+            },
+            {
+                "number": "2",
+                "name": "Μαριαλένα Αρτακιανού",
+                "position": "Libero",
+                "birthdate": "21\/05\/1994",
+                "height": "1.68"
+            },
+            {
+                "number": "5",
+                "name": "Ιφιγένεια Σαμπάτη",
+                "position": "Libero",
+                "birthdate": "01\/08\/1998",
+                "height": "1.68"
+            },
+            {
+                "number": "7",
+                "name": "Ελισάβετ Ηλιοπούλου",
+                "position": "Setter",
+                "birthdate": "25\/01\/2001",
+                "height": "1.76"
+            },
+            {
+                "number": "9",
+                "name": "Νάσια Φακοπουλίδου",
+                "position": "Outside Hitter",
+                "birthdate": "22\/05\/1998",
+                "height": "1.81"
+            },
+            {
+                "number": "10",
+                "name": "Μελίνα Εμμανουηλίδου",
+                "position": "Middle Blocker",
+                "birthdate": "18\/09\/1994",
+                "height": "1.86"
+            },
+            {
+                "number": "11",
+                "name": "Μαρία Οικονομίδου",
+                "position": "Opposite",
+                "birthdate": "18\/08\/1992",
+                "height": "1.85"
+            },
+            {
+                "number": "12",
+                "name": "Milica Kubura",
+                "position": "Opposite",
+                "birthdate": "20\/03\/1993",
+                "height": "1.94"
+            },
+            {
+                "number": "14",
+                "name": "Κυριακή Τερζόγλου",
+                "position": "Middle Blocker",
+                "birthdate": "22\/11\/2003",
+                "height": "1.86"
+            },
+            {
+                "number": "15",
+                "name": "Jovana Stevanovic",
+                "position": "Middle Blocker",
+                "birthdate": "30\/06\/1992",
+                "height": "1.92"
+            },
+            {
+                "number": "17",
+                "name": "Kenia Carcaces",
+                "position": "Outside Hitter",
+                "birthdate": "22\/01\/1986",
+                "height": "1.90"
+            },
+            {
+                "number": "18",
+                "name": "Yasmine Abderrahim",
+                "position": "Outside Hitter",
+                "birthdate": "16\/04\/1999",
+                "height": "1.82"
+            },
+            {
+                "number": "19",
+                "name": "Ιωάννα Δημητρίου",
+                "position": "Middle Blocker",
+                "birthdate": "03\/09\/2008",
+                "height": "1.87"
+            },
+            {
+                "number": "20",
+                "name": "Amanda Coneo",
+                "position": "Outside Hitter",
+                "birthdate": "20\/12\/1996",
+                "height": "1.78"
+            },
+            {
+                "number": "77",
+                "name": "Isabella Di Iulio",
+                "position": "Setter",
+                "birthdate": "26\/11\/1991",
+                "height": "1.75"
+            }
+        ]
+    },
+    {
+        "name": "Π.Α.Ο.Κ.",
+        "logo": "assets\/images-club\/PAOK.jpeg",
+        "team_photo": "assets\/images-club\/paokteam.jpeg",
+        "youtube": "https:\/\/www.youtube.com\/embed\/5m8_oyNSt9M",
+        "site": "https:\/\/www.paokfc.gr\/matches\/paok-ofi-cup-final-26\/",
+        "coach": "Γιάννης Γιαπάνης",
+        "players": [
+            {
+                "number": "1",
+                "name": "Tara Taubner",
+                "position": "Opposite",
+                "birthdate": "01\/11\/2003",
+                "height": "1.88"
+            },
+            {
+                "number": "2",
+                "name": "Νίκη Απλαδά",
+                "position": "Middle Blocker",
+                "birthdate": "08\/11\/2002",
+                "height": "1.85"
+            },
+            {
+                "number": "3",
+                "name": "Αριστέα Τοντάι",
+                "position": "Middle Blocker",
+                "birthdate": "05\/07\/1999",
+                "height": "1.96"
+            },
+            {
+                "number": "4",
+                "name": "T’ara Ceasar",
+                "position": "Outside Hitter",
+                "birthdate": "20\/07\/1999",
+                "height": "1.85"
+            },
+            {
+                "number": "5",
+                "name": "Στυλιανή Αντύπα",
+                "position": "Outside Hitter",
+                "birthdate": "31\/08\/2002",
+                "height": "1.76"
+            },
+            {
+                "number": "6",
+                "name": "Jovana Kocic",
+                "position": "Middle Blocker",
+                "birthdate": "24\/02\/1998",
+                "height": "1.90"
+            },
+            {
+                "number": "7",
+                "name": "Λίνα Θεοδοσίου",
+                "position": "Libero, Outside Hitter",
+                "birthdate": "25\/10\/2002",
+                "height": "1.75"
+            },
+            {
+                "number": "8",
+                "name": "Ilka Van De Vyver",
+                "position": "Setter",
+                "birthdate": "26\/01\/1993",
+                "height": "1.80"
+            },
+            {
+                "number": "9",
+                "name": "Κωνσταντίνα Μπαλογιάννη",
+                "position": "Outside Hitter",
+                "birthdate": "26\/10\/2003",
+                "height": "1.86"
+            },
+            {
+                "number": "11",
+                "name": "Μαρία Καραμπάση",
+                "position": "Libero",
+                "birthdate": "01\/12\/2003",
+                "height": "1.65"
+            },
+            {
+                "number": "12",
+                "name": "Τατιάνα Αρμουτσή",
+                "position": "Middle Blocker",
+                "birthdate": "24\/05\/2003",
+                "height": "1.84"
+            },
+            {
+                "number": "13",
+                "name": "Βούλη Κουρτίδου",
+                "position": "Libero",
+                "birthdate": "04\/11\/1999",
+                "height": "1.69"
+            },
+            {
+                "number": "14",
+                "name": "Άλκηστις Καραφουλίδου",
+                "position": "Opposite",
+                "birthdate": "13\/09\/1999",
+                "height": "1.95"
+            },
+            {
+                "number": "21",
+                "name": "Έλενα Μπάκα",
+                "position": "Outside Hitter",
+                "birthdate": "23\/06\/2001",
+                "height": "1.86"
+            },
+            {
+                "number": "44",
+                "name": "Μαρίνα Τσοχατζή",
+                "position": "Setter",
+                "birthdate": "17\/07\/1993",
+                "height": "1.77"
+            }
+        ]
+    },
+    {
+        "name": "ΠΑΝΑΘΗΝΑΪΚΟΣ Α.Ο.",
+        "logo": "assets\/images-club\/PANATHINAIKOS.jpeg",
+        "team_photo": "assets\/images-club\/panathinaikosteam.jpeg",
+        "youtube": "https:\/\/www.youtube.com\/embed\/5m8_oyNSt9M",
+        "site": "https:\/\/www.pao1908.com\/sports\/volei-gynaikon\/",
+        "coach": "Alessandro Chiappini",
+        "players": [
+            {
+                "number": "1",
+                "name": "Ειρήνη Χατζηευστρατιάδου",
+                "position": "Middle Blocker",
+                "birthdate": "02\/09\/1995",
+                "height": "1.85"
+            },
+            {
+                "number": "2",
+                "name": "Micaya Monet White",
+                "position": "Outside Hitter",
+                "birthdate": "20\/09\/1998",
+                "height": "1.86"
+            },
+            {
+                "number": "3",
+                "name": "Αφροδίτη Γιώτα",
+                "position": "Middle Blocker",
+                "birthdate": "03\/12\/1999",
+                "height": "1.82"
+            },
+            {
+                "number": "4",
+                "name": "Ευαγγελία Τάνη",
+                "position": "Setter",
+                "birthdate": "22\/07\/2004",
+                "height": "1.82"
+            },
+            {
+                "number": "6",
+                "name": "Όλγα Στράντζαλη",
+                "position": "Outside Hitter",
+                "birthdate": "12\/01\/1996",
+                "height": "1.85"
+            },
+            {
+                "number": "7",
+                "name": "Haylie Lynn Bennett",
+                "position": "Opposite",
+                "birthdate": "02\/05\/1998",
+                "height": "1.86"
+            },
+            {
+                "number": "10",
+                "name": "Μάρα Ράπτη",
+                "position": "Outside Hitter",
+                "birthdate": "30\/10\/1996",
+                "height": "1.78"
+            },
+            {
+                "number": "11",
+                "name": "Λαμπρινή Κωνσταντινίδου",
+                "position": "Setter",
+                "birthdate": "16\/09\/1996",
+                "height": "1.84"
+            },
+            {
+                "number": "12",
+                "name": "Martina Samadan",
+                "position": "Middle Blocker",
+                "birthdate": "11\/09\/1993",
+                "height": "1.93"
+            },
+            {
+                "number": "13",
+                "name": "Παναγιώτα Ρόγκα",
+                "position": "Libero",
+                "birthdate": "04\/07\/1987",
+                "height": "1.67"
+            },
+            {
+                "number": "14",
+                "name": "Monika Lampkowska",
+                "position": "Outside Hitter",
+                "birthdate": "06\/11\/1999",
+                "height": "1.83"
+            },
+            {
+                "number": "16",
+                "name": "Γεωργία-Μαρία Αντωνακάκη",
+                "position": "Libero",
+                "birthdate": "16\/09\/2002",
+                "height": "1.75"
+            },
+            {
+                "number": "18",
+                "name": "Μαρκέλλα Παπαγεωργίου",
+                "position": "Middle Blocker",
+                "birthdate": "16\/09\/2002",
+                "height": "1.82"
+            },
+            {
+                "number": "22",
+                "name": "Μανωλίνα Κωνσταντίνου",
+                "position": "Outside Hitter",
+                "birthdate": "16\/09\/2002",
+                "height": "1.83"
+            },
+            {
+                "number": "23",
+                "name": "Άντζελα Παπά",
+                "position": "Opposite",
+                "birthdate": "11\/05\/1997",
+                "height": "1.80"
+            }
+        ]
+    },
+    {
+        "name": "ΠANIΩNIOΣ",
+        "logo": "assets\/images-club\/PANIONIOS.jpeg",
+        "team_photo": "assets\/images-club\/panioniosteam.jpeg",
+        "youtube": "https:\/\/www.youtube.com\/embed\/5m8_oyNSt9M",
+        "site": "https:\/\/www.panionios.gr\/volleyball",
+        "coach": "Yunus Öçal",
+        "players": [
+            {
+                "number": "1",
+                "name": "Bianca Ristisevic",
+                "position": "Outside Hitter",
+                "birthdate": "25\/07\/1994",
+                "height": "1.90"
+            },
+            {
+                "number": "3",
+                "name": "Μαρία Νομικού",
+                "position": "Middle Blocker",
+                "birthdate": "25\/07\/1994",
+                "height": "1.90"
+            },
+            {
+                "number": "7",
+                "name": "Ξένια Κακουράτου",
+                "position": "Libero",
+                "birthdate": "16\/06\/1993",
+                "height": "1.58"
+            },
+            {
+                "number": "8",
+                "name": "Έλενα Μιλεντίγιεβιτς",
+                "position": "Outside Hitter",
+                "birthdate": "16\/06\/1993",
+                "height": "1.74"
+            },
+            {
+                "number": "9",
+                "name": "Nina Stojiljkovic",
+                "position": "Setter",
+                "birthdate": "01\/09\/1996",
+                "height": "1.78"
+            },
+            {
+                "number": "11",
+                "name": "Μαρτίνα Ξανθοπούλου",
+                "position": "Libero",
+                "birthdate": "30\/03\/1993",
+                "height": "1.65"
+            },
+            {
+                "number": "12",
+                "name": "Ευαγγελία Χαντάβα",
+                "position": "Outside Hitter",
+                "birthdate": "16\/06\/1993",
+                "height": "1.88"
+            },
+            {
+                "number": "14",
+                "name": "Εβελίνα Φλιάκου",
+                "position": "Setter",
+                "birthdate": "18\/02\/2000",
+                "height": "1.75"
+            },
+            {
+                "number": "15",
+                "name": "Αθανασία Λιάγκη",
+                "position": "Opposite",
+                "birthdate": "24\/11\/1995",
+                "height": "1.83"
+            },
+            {
+                "number": "16",
+                "name": "Elitsa Vasileva-Atanasijevic",
+                "position": "Outside Hitter",
+                "birthdate": "13\/05\/1990",
+                "height": "1.90"
+            },
+            {
+                "number": "17",
+                "name": "Polina Rahimova",
+                "position": "Opposite",
+                "birthdate": "05\/06\/1990",
+                "height": "1.98"
+            },
+            {
+                "number": "20",
+                "name": "Γεωργία-Λούλα Αγγελοπούλου",
+                "position": "Outside Hitter",
+                "birthdate": "11\/02\/2005",
+                "height": "1.80"
+            },
+            {
+                "number": "21",
+                "name": "Κατερίνα Ζακχαίου",
+                "position": "Middle Blocker",
+                "birthdate": "26\/07\/1998",
+                "height": "1.92"
+            },
+            {
+                "number": "77",
+                "name": "Γεωργία Λαμπρούση",
+                "position": "Middle Blocker",
+                "birthdate": "27\/01\/1993",
+                "height": "1.84"
+            },
+            {
+                "number": "99",
+                "name": "Ιωάννα Καρέλια",
+                "position": "Middle Blocker",
+                "birthdate": "20\/12\/1987",
+                "height": "1.82"
+            }
+        ]
+    },
+    {
+        "name": "a",
+        "logo": "assets\/images-club\/aekteam.jpeg",
+        "team_photo": "assets\/images-club\/aek.jpeg",
+        "youtube": "https:\/\/github.com\/gkosnia163\/bolei",
+        "site": "https:\/\/github.com\/gkosnia163\/bolei",
+        "coach": "makis",
+        "players": [
+            {
+                "number": "1",
+                "name": "αβ",
+                "position": "Outside Hitter",
+                "birthdate": "03\/06\/2026",
+                "height": "1"
+            },
+            {
+                "number": "2",
+                "name": "σσ",
+                "position": "Opposite",
+                "birthdate": "19\/06\/2026",
+                "height": "1"
+            },
+            {
+                "number": "3",
+                "name": "δ",
+                "position": "Opposite",
+                "birthdate": "27\/06\/2026",
+                "height": "1"
+            },
+            {
+                "number": "4",
+                "name": "φ",
+                "position": "Libero",
+                "birthdate": "14\/06\/2026",
+                "height": "1"
+            },
+            {
+                "number": "5",
+                "name": "σ",
+                "position": "Middle Blocker",
+                "birthdate": "12\/06\/2026",
+                "height": "1"
+            },
+            {
+                "number": "6",
+                "name": "φ",
+                "position": "Middle Blocker",
+                "birthdate": "12\/06\/2026",
+                "height": "1"
+            },
+            {
+                "number": "7",
+                "name": "γ",
+                "position": "Outside Hitter",
+                "birthdate": "06\/06\/2026",
+                "height": "1"
+            },
+            {
+                "number": "8",
+                "name": "σφδσφδσ",
+                "position": "Libero",
+                "birthdate": "13\/06\/2026",
+                "height": "1"
+            },
+            {
+                "number": "9",
+                "name": "σδσ",
+                "position": "Middle Blocker",
+                "birthdate": "12\/06\/2026",
+                "height": "1"
+            },
+            {
+                "number": "10",
+                "name": "σφδ",
+                "position": "Libero",
+                "birthdate": "29\/07\/2026",
+                "height": "1.01"
+            },
+            {
+                "number": "11",
+                "name": "φδσφσδφσ",
+                "position": "Outside Hitter",
+                "birthdate": "06\/06\/2026",
+                "height": "1"
+            },
+            {
+                "number": "12",
+                "name": "φδσφσδ",
+                "position": "Outside Hitter",
+                "birthdate": "03\/06\/2026",
+                "height": "1"
+            }
+        ],
+        "owner": "skata"
+    }
+]

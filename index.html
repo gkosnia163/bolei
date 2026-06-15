@@ -13,29 +13,85 @@
     </a>
     <div class="container">
         <div class="selection-grid">
-            <a href="rankings.html" class="selection-item">
+            <a href="rankings.php" class="selection-item">
                 <img src="assets/images/rankings.png" alt="Rankings">
                 <p>Rankings</p>
             </a>
-            <a href="matches.html" class="selection-item">
+            <a href="matches.php" class="selection-item">
                 <img src="assets/images/Matches.png" alt="Matches">
                 <p>Matches</p>
             </a>
-            <a href="clubs.html" class="selection-item">
+            <a href="clubs.php" class="selection-item">
                 <img src="assets/images/league.png" alt="Clubs">
                 <p>Clubs</p>
             </a>
-            <a href="matches.html" class="selection-item">
+            <a href="add_club.php" class="selection-item" id="add-club-link" style="display: none;">
                 <img src="assets/images/plus.png" alt="plus">
                 <p>Add club</p>
             </a>
-            <a href="login.html" class="selection-item">
+            <a href="change.html" class="selection-item" id="change-link" style="display: none;">
+                <p>change credentials</p>
+            </a>
+            <a href="login.html" class="selection-item" id="login-link">
                 <p>log-in</p>
             </a>
-            <a href="sign-up.html" class="selection-item">
+            <a href="sign-up.html" class="selection-item" id="signup-link">
                 <p>sign-up</p>
+            </a>
+            <a href="#" class="selection-item" id="logout-link" style="display: none;">
+                <p>log-out</p>
+            </a>
+             <a href="admin.php" class="selection-item" id="admin-link" style="display: none;">
+                <p>admin</p>
             </a>
         </div>
     </div>    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('api/profiles.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: 'action=get_current_user'
+            })
+            .then(response => response.json())
+            .then(user => {
+                if (user) { //petyxhmeno login
+                    document.getElementById('login-link').style.display = 'none';
+                    document.getElementById('signup-link').style.display = 'none';
+                    document.getElementById('logout-link').style.display = '';
+                    document.getElementById('change-link').style.display = ''; // Show change credentials only if logged in
+
+                    if (user.status === 'active') {
+                        if (user.role === 'manager' || user.role === 'admin') {
+                            document.getElementById('add-club-link').style.display = '';
+                        }
+                        if (user.role === 'admin') {
+                            document.getElementById('admin-link').style.display = '';
+                        }
+                    }
+                }
+            })
+            .catch(error => console.error('Error fetching user:', error));
+
+            document.getElementById('logout-link').addEventListener('click', function(e) {
+                e.preventDefault();
+                fetch('api/profiles.php', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: 'action=logout'
+                })
+                .then(response => response.text())
+                .then(result => {
+                    if (result.trim() === 'success') {
+                        window.location.reload(); // Reload the page to reset the UI
+                    } else {
+                        alert('Σφάλμα κατά την αποσύνδεση');
+                    }
+                })
+                .catch(error => console.error('Error logging out:', error));
+            });
+        });
+    </script>
 </body>
 </html>

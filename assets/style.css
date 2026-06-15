@@ -82,7 +82,7 @@ h1 {
     margin-top: 20px;
 }
 .selection-item:nth-child(5) { 
-    transform: rotate(-1deg) translateY(-10px);
+    transform: rotate(-5deg) translateY(-10px);
     flex-basis: 15%;
     margin-top: 45px;
 }
@@ -91,6 +91,22 @@ h1 {
     flex-basis: 10%;
     margin-top: 45px;
 }
+.selection-item:nth-child(7) { 
+    transform: rotate(-2deg) translateY(10px);
+    flex-basis: 10%;
+    margin-top: 45px;
+}
+.selection-item:nth-child(8) { 
+    transform: rotate(2deg) translateY(-10px);
+    flex-basis: 10%;
+    margin-top: 45px;
+}
+.selection-item:nth-child(9) { 
+    transform: rotate(-5deg) translateY(10px);
+    flex-basis: 10%;
+    margin-top: 45px;
+}
+
 
 .selection-item:hover {
     transform: scale(1.1) rotate(0deg) !important;

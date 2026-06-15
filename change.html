@@ -53,8 +53,14 @@
             </form>
         </div>
     </div>
-    <php src="profiles.php"></php>
     <script>
+        function clearErrors() {
+            const inputs = document.querySelectorAll('input');
+            inputs.forEach(input => input.style.borderColor = '#ccc');
+            const errors = document.querySelectorAll('.error-msg');
+            errors.forEach(error => error.textContent = '');
+        }
+
         function showError(inputId, message) {
             document.getElementById(inputId).style.borderColor = 'red';
             const errorSpan = document.getElementById(inputId + '-error');
@@ -63,115 +69,138 @@
             }
         }
 
-        const currentUser = getCurrentUser();
-        if (!currentUser) {
-            alert("Παρακαλώ συνδεθείτε πρώτα.");
-            window.location.href = "login.html";
-        } else {
-            document.getElementById('change-form').addEventListener('submit', function(e){
-                e.preventDefault();
-                clearErrors();
-                let hasError = false;
+        let currentUser = null;
 
-                const firstnameInput = document.getElementById("firstname").value;
-                if (firstnameInput) {
-                    let firstNameHasDigit = false;
-                    for (let i = 0; i < firstnameInput.length; i++) {
-                        if (firstnameInput[i] >= '0' && firstnameInput[i] <= '9') {
-                            firstNameHasDigit = true;
-                            break;
-                        }
-                    }
-                    if (firstNameHasDigit) {
-                        showError("firstname", 'To όνομα περιλαμβάνει αριθμό!');
-                        hasError = true;
-                    }
-                }
-
-                const lastnameInput = document.getElementById("lastname").value;
-                if (lastnameInput) {
-                    let lastNameHasDigit = false;
-                    for (let i = 0; i < lastnameInput.length; i++) {
-                        if (lastnameInput[i] >= '0' && lastnameInput[i] <= '9') {
-                            lastNameHasDigit = true;
-                            break;
-                        }
-                    }
-                    if (lastNameHasDigit) {
-                        showError("lastname", 'To επίθετο περιλαμβάνει αριθμό!');
-                        hasError = true;
-                    }
-                }
-
-                const phoneInput = document.getElementById("phone").value;
-                if (phoneInput) {
-                    let phoneValid = true;
-                    if (phoneInput.length !== 10) {
-                        phoneValid = false;
-                    } else {
-                        for (let i = 0; i < phoneInput.length; i++) {
-                            if (isNaN(phoneInput[i]) || phoneInput[i] === " ") {
-                                phoneValid = false;
-                                break;
-                            }
-                        }
-                    }
-                    if (!phoneValid) {
-                        showError("phone", 'To τηλέφωνο πρέπει να αποτελείται από ακριβώς 10 ψηφία!');
-                        hasError = true;
-                    }
-                }
-
-                const passwordInput = document.getElementById("password").value;
-                if (passwordInput) {
-                    let passwordValid = false;
-                    if (passwordInput.length < 5) {
-                        passwordValid = false;
-                    } else {
-                        const punctuation = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~';              
-                        for (const char of passwordInput){
-                            if (punctuation.includes(char)){
-                                passwordValid = true;
-                                break;
-                            }
-                        }
-                    }
-                    if (!passwordValid){
-                        showError("password", 'Ο κωδικός πρέπει να περιέχει τουλάχιστον ένα σημείο στίξης!');
-                        hasError = true;
-                    }
-                }
-
-                const oldPasswordInput = document.getElementById("old-password").value;
-                if (oldPasswordInput !== currentUser.password) {
-                    showError("old-password", 'Λάθος κωδικός!'); 
-                    hasError = true;
-                }
-
-                if (hasError) {
-                    return;
-                }
-
-                const newUser = { 
-                    currentUser,
-                    firstname: firstnameInput || currentUser.firstname,
-                    lastname: lastnameInput || currentUser.lastname,
-                    phone: phoneInput || currentUser.phone,
-                    email: document.getElementById("email").value || currentUser.email,
-                    password: passwordInput || currentUser.password
-                };
+        const formData = new FormData();
+        formData.append('action', 'get_current_user');
+        
+        fetch('api/profiles.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(res => res.json())
+        .then(user => {
+            if (!user) {
+                alert("Παρακαλώ συνδεθείτε πρώτα.");
+                window.location.href = "login.html";
+            } else {
+                currentUser = user;
                 
-                const success = updateUserProfile(newUser);
-                if (success) {
-                    alert("Τα στοιχεία ενημερώθηκαν επιτυχώς!");
-                    currentUser.password = newUser.password;
-                    document.getElementById("old-password").value = "";
-                    document.getElementById("password").value = "";
-                } else {
-                    alert("Σφάλμα αποθήκευσης.");
-                }
-            }); 
-        }
+                document.getElementById('change-form').addEventListener('submit', function(e){
+                    e.preventDefault();
+                    clearErrors();
+                    let hasError = false;
+
+                    const firstnameInput = document.getElementById("firstname").value;
+                    if (firstnameInput) {
+                        let firstNameHasDigit = false;
+                        for (let i = 0; i < firstnameInput.length; i++) {
+                            if (firstnameInput[i] >= '0' && firstnameInput[i] <= '9') {
+                                firstNameHasDigit = true;
+                                break;
+                            }
+                        }
+                        if (firstNameHasDigit) {
+                            showError("firstname", 'To όνομα περιλαμβάνει αριθμό!');
+                            hasError = true;
+                        }
+                    }
+
+                    const lastnameInput = document.getElementById("lastname").value;
+                    if (lastnameInput) {
+                        let lastNameHasDigit = false;
+                        for (let i = 0; i < lastnameInput.length; i++) {
+                            if (lastnameInput[i] >= '0' && lastnameInput[i] <= '9') {
+                                lastNameHasDigit = true;
+                                break;
+                            }
+                        }
+                        if (lastNameHasDigit) {
+                            showError("lastname", 'To επίθετο περιλαμβάνει αριθμό!');
+                            hasError = true;
+                        }
+                    }
+
+                    const phoneInput = document.getElementById("phone").value;
+                    if (phoneInput) {
+                        let phoneValid = true;
+                        if (phoneInput.length !== 10) {
+                            phoneValid = false;
+                        } else {
+                            for (let i = 0; i < phoneInput.length; i++) {
+                                if (isNaN(phoneInput[i]) || phoneInput[i] === " ") {
+                                    phoneValid = false;
+                                    break;
+                                }
+                            }
+                        }
+                        if (!phoneValid) {
+                            showError("phone", 'To τηλέφωνο πρέπει να αποτελείται από ακριβώς 10 ψηφία!');
+                            hasError = true;
+                        }
+                    }
+
+                    const passwordInput = document.getElementById("password").value;
+                    if (passwordInput) {
+                        let passwordValid = false;
+                        if (passwordInput.length < 5) {
+                            passwordValid = false;
+                        } else {
+                            const punctuation = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~';              
+                            for (const char of passwordInput){
+                                if (punctuation.includes(char)){
+                                    passwordValid = true;
+                                    break;
+                                }
+                            }
+                        }
+                        if (!passwordValid){
+                            showError("password", 'Ο κωδικός πρέπει να περιέχει τουλάχιστον ένα σημείο στίξης!');
+                            hasError = true;
+                        }
+                    }
+
+                    const oldPasswordInput = document.getElementById("old-password").value;
+                    if (oldPasswordInput !== currentUser.password) {
+                        showError("old-password", 'Λάθος κωδικός!'); 
+                        hasError = true;
+                    }
+
+                    if (hasError) {
+                        return;
+                    }
+
+                    const updateData = new FormData();
+                    updateData.append('action', 'update');
+                    updateData.append('firstname', firstnameInput || currentUser.firstname);
+                    updateData.append('lastname', lastnameInput || currentUser.lastname);
+                    updateData.append('phone', phoneInput || currentUser.phone);
+                    updateData.append('email', document.getElementById("email").value || currentUser.email);
+                    updateData.append('password', passwordInput || currentUser.password);
+
+                    fetch('api/profiles.php', {
+                        method: 'POST',
+                        body: updateData
+                    })
+                    .then(res => res.text())
+                    .then(text => {
+                        if (text.trim() === 'success') {
+                            alert("Τα στοιχεία ενημερώθηκαν επιτυχώς!");
+                            currentUser.password = passwordInput || currentUser.password;
+                            currentUser.firstname = firstnameInput || currentUser.firstname;
+                            currentUser.lastname = lastnameInput || currentUser.lastname;
+                            currentUser.phone = phoneInput || currentUser.phone;
+                            currentUser.email = document.getElementById("email").value || currentUser.email;
+                            
+                            document.getElementById("old-password").value = "";
+                            document.getElementById("password").value = "";
+                        } else {
+                            alert("Σφάλμα: " + text);
+                        }
+                    });
+                });
+            }
+        });
     </script>
 </body>
 </html>
